@@ -61,7 +61,7 @@ jobs:
         env:
           MC_USERNAME: ${{ secrets.MC_USERNAME }}
           MC_PASSWORD: ${{ secrets.MC_PASSWORD }}
-          MAX_ROUNDS: ${{ github.event.inputs.max_rounds || '10' }}
+          MAX_ROUNDS: ${{ github.event.inputs.max_rounds || '5' }}
           PROXY: http://127.0.0.1:1081
         run: xvfb-run -a --server-args="-screen 0 1360x900x24" python claim.py
 
